@@ -24,12 +24,8 @@
     $password = $_POST['pword1'];
 
     $sql1 = "SELECT * FROM users WHERE username=\"" . $username . "\" AND password=PASSWORD(\"".$password."\");";
-    // echo $username;
-
     $result = ($conn->query($sql1))->fetch_all();
-    // echo $username;
 
-    // var_dump($result);
     if (count($result) > 0) {
         session_start();
         if(!empty($_POST["remember"])) {

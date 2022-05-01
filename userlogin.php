@@ -25,14 +25,16 @@
         2 => "Username Taken",
         3 => "Passwords do not match"
     );
-    $error_id = isset($_GET['err']) ? (int)$_GET['err'] : 0;
-    if ($error_id != 0 && array_key_exists($error_id, $errors)) {
-        echo $errors[$error_id];
-    }
+
     ?>
     <h2 class="center2 logo">PropertyHub</h2>
     <div class="landing">
         <div class="login">
+            <p><?php $error_id = isset($_GET['err']) ? (int)$_GET['err'] : 0;
+                if ($error_id != 0 && array_key_exists($error_id, $errors)) {
+                    echo $errors[$error_id];
+                }
+                ?></p>
             <h1 class="center3">Login</h1>
             <form action="./login.php" method="post">
                 <label for="uname">Username:</label><br>
