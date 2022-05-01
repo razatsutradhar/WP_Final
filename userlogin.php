@@ -24,10 +24,10 @@
         echo $errors[$error_id];
     }
     ?>
-    <h1 class="center2 logo">PropertyHub</h1>
+    <h2 class="center2 logo">PropertyHub</h2>
     <div class="landing">
         <div class="login">
-            <h1>Login</h1>
+            <h1 class="center3">Login</h1>
             <form action="./login.php" method="post">
                 <label for="uname">Username:</label><br>
                 <input type="text" id="uname" name="uname" value="<?php if (isset($_COOKIE["username"])) {
@@ -46,7 +46,7 @@
             </form>
             <br>
             <hr class="divider">
-            <h1>Create An Account</h1>
+            <h2 class="center3">Create An Account</h2>
             <form action="./register.php" method="post">
                 <label for="uname">Username:</label><br>
                 <input type="text" id="uname" name="uname" value=""><br><br>
@@ -71,8 +71,6 @@
             <br>
         </div>
     </div>
-
-    ((lambda f (lambda x (f x))) (lambda y (* y y))) 12
 
 
 </body>
