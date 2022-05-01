@@ -108,6 +108,12 @@ body {
     color: white;
 }
 
+.center6 {
+    display: block;
+    text-align: center;
+    color: white;
+}
+
 .title {
     display: flex;
     flex-direction: column;
@@ -208,6 +214,7 @@ input:checked+.slider:before {
 /* Add a black background color to the top navigation */
 
 .topnav {
+    /* position: absolute; */
     background-color: #333;
     overflow: hidden;
 }
@@ -258,5 +265,30 @@ div.gallery img {
 div.desc {
     padding: 15px;
     text-align: center;
+    color: white;
+}
+
+a.button1 {
+    /* display: inline-block; */
+    padding: 0.35em 1.2em;
+    border: 0.1em solid #FFFFFF;
+    margin: auto;
+    width: 200px;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #FFFFFF;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+a.button1:hover {
+    color: black;
+    background-color: orange;
+}
+
+.white-text {
     color: white;
 }

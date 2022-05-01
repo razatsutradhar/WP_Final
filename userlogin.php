@@ -15,6 +15,7 @@
         <a href="./index.html">Home</a>
         <a href="./aboutus.html">About</a>
         <a class="active" href="./userlogin.php">Login</a>
+
     </div>
     <?php
     // include(dirname(__DIR__).'/login.php');
@@ -71,7 +72,7 @@
 
 
 
-                <input type="submit" value="Submit" name="login">
+                <input type="submit" value="Submit" name="login" id="login">
             </form>
             <br>
         </div>
