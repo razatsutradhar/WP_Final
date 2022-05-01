@@ -11,6 +11,11 @@
 </head>
 
 <body>
+    <div class="topnav">
+        <a href="./index.html">Home</a>
+        <a href="./aboutus.html">About</a>
+        <a class="active" href="./userlogin.php">Login</a>
+    </div>
     <?php
     // include(dirname(__DIR__).'/login.php');
     // include(dirname(__DIR__).'/register.php');
@@ -63,7 +68,7 @@
                     <input type="checkbox" name="isVendor" id="isVendor">
                     <span class="slider round"></span>
                 </label><br><br>
-                
+
 
 
                 <input type="submit" value="Submit" name="login">
