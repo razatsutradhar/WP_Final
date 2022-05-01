@@ -18,6 +18,13 @@ if (isset($_POST['login']) && isset($_POST['uname']) && isset($_POST['pword1']) 
     $email = $_POST['email'];
     $password1 = $_POST['pword1'];
     $password2 = $_POST['pword2'];
+    $vendor = $_POST['isVendor'];
+
+    if(isset($_POST['isVendor'])){
+        $vendor = 1;
+    }else{
+        $vendor = 0;
+    }
 
     $servername = "localhost";
     $susername = "rsutradhar1";
@@ -30,6 +37,8 @@ if (isset($_POST['login']) && isset($_POST['uname']) && isset($_POST['pword1']) 
 		exit();
 	}
 
+
+
     
     $sql = "SELECT * FROM users WHERE username=\"" . $username."\";";
     $result = ($conn->query($sql))->fetch_all();
@@ -41,7 +50,9 @@ if (isset($_POST['login']) && isset($_POST['uname']) && isset($_POST['pword1']) 
     if ($password1 != $password2) {
         header("location: ./userlogin.php?err=3");
     } else {
-        $sql = "INSERT INTO users (username, password, email) VALUES (\"" . $username . "\", PASSWORD(\"" . $password1 . "\"), \"". $email ."\");";
+        $sql = "INSERT INTO users (username, password, email, isVendor
+        
+        ) VALUES (\"" . $username . "\", PASSWORD(\"" . $password1 . "\"), \"". $email ."\", ".$vendor.");";
         if ($conn->query($sql) === TRUE) {
             echo "New user successfully added";
         } else {

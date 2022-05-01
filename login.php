@@ -48,27 +48,7 @@
         header("location: ./userlogin.php?err=1");
         echo "failed to find user";
     }
-    
-    // echo $result;
-    // echo $encryptedPass;
-    // if(count($result) > 0 && $result[0] == $encryptedPass[0]){
-    //     session_start();
-    //     if(!empty($_POST["remember"])) {
-    //         setcookie ("remember",$_POST["uname"],time()+ 3600);
-    //         setcookie ("username",$_POST["uname"],time()+ 3600);
-    //         setcookie ("password",$_POST["pword1"],time()+ 3600);
 
-    //     } else {
-    //         setcookie("username","");
-    //         setcookie("password","");
-    //         setcookie ("remember","");
-
-    //     }
-    //     $_SESSION["user"] = $username;
-    //     header("location: ./myboard.php");
-    // }else{
-    //     header("location: ./userlogin.php?err=1");
-    // }
 ?>
 </body>
 </html>
