@@ -1,6 +1,8 @@
+@import 'nav.css';
+
 body {
     margin: 0;
-    background-color: black;
+    background-color: white;
     padding: 0px;
 }
 
@@ -48,7 +50,7 @@ body {
     width: 400px;
     /* Can be in percentage also. */
     height: auto;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 10px;
     padding-left: 30px;
     padding-right: 30px;

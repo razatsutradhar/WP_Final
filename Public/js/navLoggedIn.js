@@ -17,7 +17,7 @@ const creatNav = () => {
         <ul class="links-container">
             <li class="link-item"><a a href="./index.html" class="link">Home</a></li>
             <li class="link-item"><a a href="./aboutus.html" class="link">About Us</a></li>
-            <li class="link-item"><a a href="./userlogin.php" class="link">Login</a></li>
+            <li class="link-item"><a a href="./logout.php" class="link">Logout</a></li>
         </ul>
     `;
 

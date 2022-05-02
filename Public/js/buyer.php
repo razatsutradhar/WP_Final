@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Buyer Dashboard</title>
     <link rel="stylesheet" href="../css/buyer.css">
+    <?php session_start()?>
 </head>
 
 <body>
-
+    
     <nav class="navbar"></nav>
 
     <!-- hero-section-->
@@ -147,8 +148,15 @@
         </a>
     </section>
 
-
-    <script src="nav.js"></script>
+    <?php   
+        echo ($_SESSION["user"]);
+        if (isset($_SESSION["user"])){
+            echo "<script src=\"navLoggedIn.js\"></script>";
+        }else{
+            echo "<script src=\"nav.js\"></script>";
+        }
+    ?>
+    
     <script src="index.js"></script>
 </body>
 

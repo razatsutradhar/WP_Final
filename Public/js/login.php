@@ -40,7 +40,7 @@
 
         //buyer
         if($result[0][3] == "0"){
-            header("location: ./index.html");
+            header("location: ./buyer.php");
 
         //seller
         }else if($result[0][3] == "1"){
@@ -48,10 +48,11 @@
 
         //admin
         }else if($result[0][3] == "2"){
-            header("location: ./index.html");
+            header("location: ./index.php");
         }else{
-            header("location: ./index.html");
+            header("location: ./index.php");
         }
+        echo $_SESSION["user"];
     }else{
         header("location: ./userlogin.php?err=1");
         echo "failed to find user";

@@ -6,18 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link href="./style.css" , rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+
     <?php include './serverInfo.php';?>
 
 </head>
 
 <body>
-    <div class="topnav">
+    <!-- <div class="topnav">
         <a href="./index.html">Home</a>
         <a href="./aboutus.html">About</a>
         <a class="active" href="./userlogin.php">Login</a>
-
-    </div>
+    </div> -->
     <?php
     // include(dirname(__DIR__).'/login.php');
     // include(dirname(__DIR__).'/register.php');
