@@ -39,7 +39,7 @@
    <div class=bod>
       <div class=form>
          <!-- Add the form tag wit appropriate attributes -->
-         <form class=form action="add_prop_db.php" method="post">
+         <form class=form action="add_prop_db.php" method="post" enctype="multipart/form-data">
             <h3>New Property</h3>
             <p>Seller ID: <input name="sellerid" type="number" placeholder="1"></p>
             <p>Street: <input name="street" type="text" placeholder="123 Drury Lane"></p>
@@ -49,6 +49,7 @@
             <p>Price: <input name="price" type="text" placeholder="300000"></p>
             <p>Beds: <input name="beds" type="number" placeholder="2"></p>
             <p>Garden: <input name="garden" type="text" placeholder="y\n"></p>
+            <p>Select image to upload:<input type="file" name="fileToUpload" id="fileToUpload"></p>
             <input class=travel type="submit" id="btn2" value="Submit">
             <!-- Redirect how would you handle user cancel -->
             <a href="seller_main.php"><input class=travel type="button" id="btn1" value="Cancel"></a>

@@ -3,12 +3,13 @@
 
 <head>
    <title>Seller Main Page</title>
+   <link href="./style.css" , rel="stylesheet">
    <style>
-      body {
+      /* body {
          text-align: center;
          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
          background-color: rgb(207, 247, 229);
-      }
+      } */
 
       div.bod {
          margin: auto;

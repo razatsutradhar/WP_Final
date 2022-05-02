@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <?php include './serverInfo.php';?>
 </head>
 <body>
     
@@ -26,10 +27,7 @@ if (isset($_POST['login']) && isset($_POST['uname']) && isset($_POST['pword1']) 
         $vendor = 0;
     }
 
-    $servername = "localhost";
-    $susername = "rsutradhar1";
-    $spassword = "rsutradhar1";
-    $dbname = "rsutradhar1";
+
     $conn = new mysqli($servername, $susername, $spassword, $dbname);
     if ($mysqli->connect_errno) {
 		printf("Connect failed: %s\n", $mysqli->connect_error);
@@ -44,21 +42,21 @@ if (isset($_POST['login']) && isset($_POST['uname']) && isset($_POST['pword1']) 
     $result = ($conn->query($sql))->fetch_all();
     var_dump($result);
     if (count($result) > 0) {
+        $conn->close();
         header("location: ./userlogin.php?err=2");
     }
 
     if ($password1 != $password2) {
+        $conn->close();
         header("location: ./userlogin.php?err=3");
     } else {
-        $sql = "INSERT INTO users (username, password, email, isVendor
-        
-        ) VALUES (\"" . $username . "\", PASSWORD(\"" . $password1 . "\"), \"". $email ."\", ".$vendor.");";
+        $sql = "INSERT INTO users (username, password, email, isVendor) VALUES (\"" . $username . "\", PASSWORD(\"" . $password1 . "\"), \"". $email ."\", ".$vendor.");";
         if ($conn->query($sql) === TRUE) {
             echo "New user successfully added";
         } else {
             echo "Error: New user failed to be saved";
         }
-
+        $conn->close();
         if (!empty($_POST["remember"])) {
             setcookie("remember", $_POST["uname"], time() + 3600);
             setcookie("username", $_POST["uname"], time() + 3600);
