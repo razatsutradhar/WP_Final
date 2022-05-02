@@ -23,6 +23,17 @@ CREATE TABLE users (
 	`isVendor` TINYINT(1)
 );
 
+CREATE TABLE images (
+	`id` INT AUTO_INCREMENT PRIMARY KEY,
+	`prop_id` INT NOT NULL,
+	`path` VARCHAR(100) NOT NULL,
+	FOREIGN KEY (`prop_id`)
+	REFERENCES properties(`id`)
+	ON DELETE CASCADE
+);
+
+
+
 INSERT INTO sellers 
 	(`fname`,
 	`lname`) 
