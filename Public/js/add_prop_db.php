@@ -68,6 +68,7 @@
       $beds = (int) $_POST['beds'];
       $garden = $_POST['garden'];
 
+      //INSERT NEW PROPERTY INTO TABLE
       $sql = "INSERT INTO properties 
          (
             `seller`, `street`,
@@ -121,13 +122,13 @@
          }
 
          // Allow certain file formats
-         if (
+         /*if (
             $imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
             && $imageFileType != "gif"
          ) {
             echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
             $uploadOk = 0;
-         }
+         }*/
 
          // Check if $uploadOk is set to 0 by an error
          if ($uploadOk == 0) {
@@ -137,7 +138,7 @@
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
                echo "The file " . htmlspecialchars(basename($_FILES["fileToUpload"]["name"])) . " has been uploaded.";
 
-               $sql = "INSERT INTO images (prop_id, path) VALUES ( 1, \"" . $target_file . "\");";
+               $sql = "INSERT INTO images (prop_id, `path`) VALUES (1, \"" . $target_file . "\");";
                echo $sql;
                if ($conn->query($sql) === TRUE) {
                   echo "New user successfully added";
