@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Buyer Dashboard</title>
     <link rel="stylesheet" href="../css/buyer.css">
-    <?php session_start()?>
+    
 </head>
 
 <body>
@@ -21,20 +21,41 @@
         </div>
 
     </hearder>
+    
 
     <!-- cards container -->
     <section class="product">
+    <div class="dropdown">
+            <input type="text" class="textBox" placeholder="Dropdown Menu" readonly>
+            <div class="option">
+                <div onclick="show('Houses')">
+                    <ion-icon name="home-outline"></ion-icon>Houses
+                </div>
+                <div onclick="show('Apartments')">
+                    <ion-icon name="home-outline"></ion-icon>Apartments
+                </div>
+                <div onclick="show('Duplex')">
+                    <ion-icon name="home-outline"></ion-icon>Duplex
+                </div>
+                <div onclick="show('Mansions')">
+                    <ion-icon name="home-outline"></ion-icon>Mansions
+                </div>
+            </div>
+        </div>
         <h2 class="product-category">Great Deal Here</h2>
         <button class="pre-btn"><img src="../img/arrow.png"></button>
         <button class="nxt-btn"><img src="../img/arrow.png"></button>
         <div class="product-container">
             <div class="product-card">
                 <div class="product-image">
-                    <img src="../img/p5.webp" class="product-thumb" atl="">
+                    <a href="https://codd.cs.gsu.edu/~llin16/Web%20Programming/PW/Project4/js/product.php">
+                        <img src="../img/p5.webp" class="product-thumb" atl="">
+                    </a>
+                    
                     <button class="card-btn">Add to wishlist</button>
                 </div>
                 <div class="product-info">
-                    <h4 class="product-type">Address</h4>
+                    <h4 class="product-type">Atlanta, GA</h4>
                     <p class="product-short-des">A short description</p>
                     <span class="price">$2000</span>
                 </div>
@@ -46,7 +67,7 @@
                     <button class="card-btn">Add to wishlist</button>
                 </div>
                 <div class="product-info">
-                    <h4 class="product-type">Address</h4>
+                    <h4 class="product-type">Sandy Spring, GA</h4>
                     <p class="product-short-des">A short description</p>
                     <span class="price">$2000</span>
                 </div>
@@ -58,7 +79,7 @@
                     <button class="card-btn">Add to wishlist</button>
                 </div>
                 <div class="product-info">
-                    <h4 class="product-type">Address</h4>
+                    <h4 class="product-type">Rincon, GA</h4>
                     <p class="product-short-des">A short description</p>
                     <span class="price">$2000</span>
                 </div>
@@ -70,7 +91,7 @@
                     <button class="card-btn">Add to wishlist</button>
                 </div>
                 <div class="product-info">
-                    <h4 class="product-type">Address</h4>
+                    <h4 class="product-type">Doraville, GA</h4>
                     <p class="product-short-des">A short description</p>
                     <span class="price">$2000</span>
                 </div>
@@ -82,7 +103,7 @@
                     <button class="card-btn">Add to wishlist</button>
                 </div>
                 <div class="product-info">
-                    <h4 class="product-type">Address</h4>
+                    <h4 class="product-type">Atlanta, GA</h4>
                     <p class="product-short-des">A short description</p>
                     <span class="price">$2000</span>
                 </div>
@@ -94,7 +115,7 @@
                     <button class="card-btn">Add to wishlist</button>
                 </div>
                 <div class="product-info">
-                    <h4 class="product-type">Address</h4>
+                    <h4 class="product-type">Sandy Spring, GA</h4>
                     <p class="product-short-des">A short description</p>
                     <span class="price">$2000</span>
                 </div>
@@ -106,7 +127,7 @@
                     <button class="card-btn">Add to wishlist</button>
                 </div>
                 <div class="product-info">
-                    <h4 class="product-type">Address</h4>
+                    <h4 class="product-type">Rincon, GA</h4>
                     <p class="product-short-des">A short description</p>
                     <span class="price">$2000</span>
                 </div>
@@ -118,7 +139,7 @@
                     <button class="card-btn">Add to wishlist</button>
                 </div>
                 <div class="product-info">
-                    <h4 class="product-type">Address</h4>
+                    <h4 class="product-type">Doraville, GA</h4>
                     <p class="product-short-des">A short line of description</p>
                     <span class="price">$2000</span>
                 </div>
@@ -158,6 +179,21 @@
     ?>
     
     <script src="index.js"></script>
+    <script src="nav.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        function show(anything) {
+            document.querySelector('.textBox').value = anything;
+        }
+
+        let dropdown = document.querySelector('.dropdown');
+        dropdown.onclick = function () {
+            dropdown.classList.toggle('active');
+        }
+    </script>
 </body>
 
 </html>
