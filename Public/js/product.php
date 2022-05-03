@@ -41,6 +41,23 @@
     </section>
 
     <section class="product">
+        <div class="dropdown">
+            <input type="text" class="textBox" placeholder="Dropdown Menu" readonly>
+            <div class="option">
+                <div onclick="show('Houses')">
+                    <ion-icon name="home-outline"></ion-icon>Houses
+                </div>
+                <div onclick="show('Apartments')">
+                    <ion-icon name="home-outline"></ion-icon>Apartments
+                </div>
+                <div onclick="show('Duplex')">
+                    <ion-icon name="home-outline"></ion-icon>Duplex
+                </div>
+                <div onclick="show('Mansions')">
+                    <ion-icon name="home-outline"></ion-icon>Mansions
+                </div>
+            </div>
+        </div>
         <h2 class="product-category">Similar Product</h2>
         <button class="pre-btn"><img src="../img/arrow.png"></button>
         <button class="nxt-btn"><img src="../img/arrow.png"></button>
@@ -136,6 +153,19 @@
     <script src="../js/nav.js"></script>
     <script src="../js/index.js"></script>
     <script src="../js/product.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        function show(anything) {
+            document.querySelector('.textBox').value = anything;
+        }
+
+        let dropdown = document.querySelector('.dropdown');
+        dropdown.onclick = function () {
+            dropdown.classList.toggle('active');
+        }
+    </script>
 
     <?php   
         echo ($_SESSION["user"]);
